@@ -76,8 +76,6 @@ function getLSFpol(LSP, f, P){
   for ( i = 2; i <= (P >> 1); i++) {
     b = -2.0 * LSP[(i << 1) -2];
     f[i] = b * f[i -1] + 2.0 * f[i -2];
-    post("b  ",b,LSP[(i << 1) -2],"  index",i,"\n");
-    
     
     for (j = i -1; j >1; j--) {
       f[j] += b * f[j -1] + f[j -2];
